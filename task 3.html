@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task</title>
+</head>
+<body>
+    <h3> Js task 3</h3>
+
+    <script>
+        
+    //A function "numCheck"  a function that takes one parameter (a whole number/integer) and checks if numbers from 1 to the given parameter (inclusive) are divisible by 2,3,5
+
+function numCheck(num){
+   let arrayn = [];
+	let newWord;
+    //Loop over each of the values 
+    for (let i = 1; i <= num; i++) {
+       let a = "yu";
+       let b = "gi";
+       let c = "ho";
+       
+        //Using If && else if condition to determine the rate
+       if(i % 2 === 0 && i % 3 === 0 && i % 5 === 0){
+            newWord = a + "-" + b + "-" + c;
+      } else if(i % 2 === 0 && i % 3 === 0){
+            newWord = a + "-" + b;       
+      } else if(i % 2 === 0 && i % 5 === 0){
+            newWord = a + "-" + c;
+      } else if(i % 3 === 0 && i % 5 === 0){
+            newWord =  b + "-" + c
+		} 
+       else if(i % 2 === 0){
+           newWord = a;
+         } else if(i % 3 === 0) {
+            newWord = b;
+        } else if (i % 5 === 0) {
+         newWord = c;
+        }else {
+			newWord = i;
+		}
+		//add the current element to the end of arr
+		arrayn.push(newWord);
+	}
+	console.log(arrayn);
+	// return the value of modified arr;
+	return arrayn;
+};
+numCheck(100);
+numCheck(10); 
+
+
+</script>
+</body>
+</html>
+
